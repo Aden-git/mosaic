@@ -13,7 +13,7 @@ import { toBoolean } from '@ptsecurity/mosaic/core';
         '[class.mc-divider-inset]': 'inset'
     },
     template: '',
-    styleUrls: ['divider.css'],
+    styleUrls: ['divider.scss'],
     encapsulation: ViewEncapsulation.None,
     changeDetection: ChangeDetectionStrategy.OnPush,
     preserveWhitespaces: false

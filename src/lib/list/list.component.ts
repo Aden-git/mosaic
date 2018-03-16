@@ -13,7 +13,7 @@ export class McListBase {}
     selector: 'mc-list',
     host: { class: 'mc-list' },
     template: '<ng-content></ng-content>',
-    styleUrls: ['./list.css'],
+    styleUrls: ['./list.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
     encapsulation: ViewEncapsulation.None
 })

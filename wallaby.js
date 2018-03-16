@@ -3,10 +3,10 @@ const wallabyWebpack = require('wallaby-webpack');
 const { TsConfigPathsPlugin } = require('awesome-typescript-loader');
 
 const path = require('path');
-const helpers = require('./tools/webpack/helpers');
 
 const compilerOptions = Object.assign(
     require('./tsconfig.webpack.json').compilerOptions,
+    require('./tsconfig.spec.json').compilerOptions,
 );
 
 compilerOptions.module = 'CommonJs';
@@ -16,53 +16,19 @@ module.exports = function (wallaby) {
 
     const webpackPostprocessor = wallabyWebpack({
         entryPatterns: [
-            'src/wallabyTest.js',
+            'src/lib-dev/wallabyTest.js',
             'src/**/*spec.js'
         ],
 
         module: {
             rules: [
-                {
-                    test: /\.ts$/,
-                    enforce: 'post',
-                    use: [{ loader: path.resolve('./tools/webpack/ng2-sass-loader.js') }]
-                },
-                { test: /\.css$/, loader: 'raw-loader' },
-                { test: /\.html$/, loader: 'raw-loader' },
-                {
-                    test: /\.ts$/,
-                    use: [
-                        {
-                            loader: 'awesome-typescript-loader',
-                            options: {
-                                configFileName: './tsconfig.webpack.json'
-                            }
-
-                        },
-                        {
-                            loader: 'angular2-template-loader'
-                        }
-                    ],
-                },
-                {
-                    test: /\.scss$/,
-                    use: [
-                        'raw-loader',
-                        {
-                            loader: 'postcss-loader',
-                            options: {
-                                sourceMap: true,
-                                plugins: () => [
-                                    require('autoprefixer')({
-                                        browsers: ['last 2 versions']
-                                    })
-                                ]
-                            }
-                        },
-                        'sass-loader?sourceMap'
-                    ],
-                    include: [ helpers.root('src') ]
-                }
+                {test: /\.css$/, loader: ['raw-loader']},
+                {test: /\.html$/, loader: 'raw-loader'},
+                {test: /\.ts$/, loader: '@ngtools/webpack', include: /node_modules/, query: {tsConfigPath: 'tsconfig.json'}},
+                {test: /\.js$/, loader: 'angular2-template-loader', exclude: /node_modules/},
+                {test: /\.json$/, loader: 'json-loader'},
+                {test: /\.scss$|\.sass$/, loaders: ['raw-loader', 'sass-loader']},
+                {test: /\.(jpg|png)$/, loader: 'url-loader?limit=128000'}
             ]
         },
 

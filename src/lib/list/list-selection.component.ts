@@ -213,7 +213,7 @@ export const _McListSelectionMixinBase = mixinTabIndex(mixinDisabled(McListSelec
     exportAs: 'mcListSelection',
     selector: 'mc-list-selection',
     template: '<ng-content></ng-content>',
-    styleUrls: ['list.css'],
+    styleUrls: ['list.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
     encapsulation: ViewEncapsulation.None,
     inputs: ['disabled', 'tabIndex'],

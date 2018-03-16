@@ -1,0 +1,27 @@
+{
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "project": {
+        "name": "mosaic-examples"
+    },
+    "apps": [
+        {
+            "name": "button",
+            "root": "src/lib-dev",
+            "outDir": "dist/lib-dev/button",
+            "index": "button/index.html",
+            "main": "button/main.ts",
+            "polyfills": "polyfills.ts",
+            "tsconfig": "../../tsconfig.webpack.json",
+            "testTsconfig": "../../tsconfig.spec.json"
+        },
+        {
+            "name": "list",
+            "root": "src/lib-dev",
+            "outDir": "dist/lib-dev/list",
+            "index": "list/index.html",
+            "main": "list/main.ts",
+            "polyfills": "polyfills.ts",
+            "tsconfig": "../../tsconfig.webpack.json"
+        }
+    ]
+}

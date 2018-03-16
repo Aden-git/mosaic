@@ -21,7 +21,7 @@ export type McPseudoCheckboxState = 'unchecked' | 'checked' | 'indeterminate';
     preserveWhitespaces: false,
     changeDetection: ChangeDetectionStrategy.OnPush,
     selector: 'mc-pseudo-checkbox',
-    styleUrls: ['pseudo-checkbox.css'],
+    styleUrls: ['pseudo-checkbox.scss'],
     template: '',
     host: {
         class: 'mc-pseudo-checkbox',

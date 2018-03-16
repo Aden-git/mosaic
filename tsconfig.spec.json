@@ -1,0 +1,18 @@
+{
+    "extends": "./tsconfig.webpack.json",
+    "compilerOptions": {
+        "outDir": "../out-tsc/spec",
+        "module": "commonjs",
+        "types": [
+            "jasmine",
+            "node"
+        ]
+    },
+    "files": [
+        "src/lib-dev/test.ts"
+    ],
+    "include": [
+        "**/*.spec.ts",
+        "**/*.d.ts"
+    ]
+}

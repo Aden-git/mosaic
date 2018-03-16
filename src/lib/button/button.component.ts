@@ -56,7 +56,7 @@ export const _McButtonMixinBase = mixinColor(mixinDisabled(McButtonBase));
         button[mc-button], button[mc-xs-button], button[mc-sm-button], button[mc-lg-button], button[mc-xl-button]
     `,
     templateUrl: './button.component.html',
-    styleUrls: ['./button.css'],
+    styleUrls: ['./button.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
     encapsulation: ViewEncapsulation.None,
     inputs: ['disabled', 'color'],
@@ -88,7 +88,7 @@ export class McButton extends _McButtonMixinBase implements OnDestroy, CanDisabl
 @Component({
     selector: 'a[mc-button], a[mc-xs-button], a[mc-sm-button], a[mc-lg-button], a[mc-xl-button]',
     templateUrl: './button.component.html',
-    styleUrls: ['./button.css'],
+    styleUrls: ['./button.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
     encapsulation: ViewEncapsulation.None,
     inputs: ['disabled', 'color'],
