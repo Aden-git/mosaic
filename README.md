@@ -6,13 +6,8 @@
 # Mosaic components for Angular
 
 <p align="center">
-    <img width="250" src="https://preview.ibb.co/kjCa7S/positive_js_logo.png" alt="positive_js_logo" border="0">
-    
-   
+    <img width="250" src="https://preview.ibb.co/fZha7S/POSITIVE_JS_LOGO_WHITE_ed2_05.png" alt="positive_js_logo" border="0">
 </p>
-
-![Image of Yaktocat](https://preview.ibb.co/kjCa7S/positive_js_logo.png)
-
 
 
 ## Demo and Documentation
